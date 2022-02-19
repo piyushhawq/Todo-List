@@ -1,0 +1,122 @@
+
+<!-- link to home css file  -->
+<link rel="stylesheet" href="/css/home.css">
+<!-- link to editTodo css file  -->
+<link rel="stylesheet" href="/css/editTodo.css">
+<!-- font awesome icons  -->
+<script src="https://kit.fontawesome.com/4072b8f88c.js" crossorigin="anonymous"></script>
+
+<!-- back button to go to the home page  -->
+<a href="/"> <i id="back-icon" class="fas fa-arrow-left"></i></a>
+
+
+<!-- this is the main div  -->
+<div id="main-div" class="center-class">
+
+    <div id="displayUpdate-div">
+
+        <!-- display the description -->
+        <div id="des-div" class="divData">
+            <h3>Description</h3>
+            <p class="width-p">
+                <%= todo_data.description %>
+            </p>
+        </div>
+
+        
+        <div id="cdtp-div">
+            <!-- display the category -->
+            <div class="divData">
+                <h3>Category</h3>
+                <span class="width-p">
+                    <%= todo_data.category %>
+                </span>
+            </div>
+
+            <!-- display the date -->
+            <div class="divData">
+                <h3>Date</h3>
+                <span class="width-p">
+                    <%= todo_data.date %>
+                </span>
+            </div>
+
+            <!-- display the Progress -->
+            <div class="divData">
+                <h3>Todo Progress</h3>
+                <span class="width-p">
+                    <%= todo_data.check %>
+                </span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="data-div">
+
+        <!-- update title  -->
+        <div>
+            <span id="update-title" class="update-list">Update Todo</span>
+        </div>
+
+        <!-- form to entry data  -->
+        <form action="/todos/update/<%= todo_data.id %>" id="todo-input" method="post">
+
+            <!-- description div  -->
+            <div id="description-div">
+                <span class="heading-text">Description</span><br>
+                <!-- entry description here -->
+                <input type="text" class="category" id="description" name="description" placeholder="Your Name"
+                    value="<%= todo_data.description %>" required>
+            </div>
+
+            <!-- category div  -->
+            <div id="cate-date-div">
+                <div id="category-div" class="width-size">
+
+                    <span class="heading-text">Category</span>
+                    <!-- choose category here -->
+                    <select name="category" id="category" class="category" value="<%= todo_data.category %>" required>
+                        <option value="" selected>Choose a category</option>
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="school">School</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- date div  -->
+                <div id="date-div" class="width-size">
+                    <span class="heading-text">Date</span>
+                    <!-- select date here -->
+                    <input type="date" id="date" class="category" name="date" value="<%= todo_data.date %>" required>
+                </div>
+            </div>
+
+            <!-- Progress div  -->
+            <div id="category-div" class="width-size">
+
+                <span class="heading-text">Task Progress</span>
+                <!-- choose Progress here -->
+                <select name="check" id="check" class="category" value="<%= todo_data.check %>" required>
+                    <option value="">Task Progress</option>
+                    <option value="Started">Started</option>
+                    <option value="ongoing">ongoing</option>
+                    <option value="Working">Working</option>
+                    <option value="Done">Done</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- update button  -->
+            <input type="submit" class="add-btn" id="update-btn" value="Update">
+
+        </form>
+        <!-- end of form  -->
+
+
+    </div>
+
+</div>

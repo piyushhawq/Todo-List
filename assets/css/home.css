@@ -1,0 +1,277 @@
+/* animation  */
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+/* the body  */
+body{   
+    background: url("/images/todo background.jpg") ;
+    background-repeat: no-repeat;
+  background-size:cover;
+    font-family: sans-serif;
+    
+}
+
+/* the main data entry div  */
+#data-div{
+    background-color: rgba(225, 235, 252, 0.5);
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+/* class to center the elements  */
+.center-class{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* heading */
+
+/* div to entry data */
+#enter-data-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#app-name{
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* input description  */
+#description{
+    width: 75rem;
+}
+#description-div{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(157, 161, 168, 0.5);
+}
+
+/* font size for all headings  */
+.heading-text{
+    font-size: 25px;
+}
+
+/* width class  */
+.width-size{
+    width: 400px;
+}
+
+/* category div */
+#cate-date-div{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    flex-direction: row;
+}
+
+/* input category  */
+.category{
+    font-size: 1rem;
+    background: none;
+    border: none;  
+    padding: 1rem;
+    border-bottom: 2px solid blue;
+}
+
+/* category div */
+#category-div{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(97, 110, 133, 0.7);
+}
+
+/* width for category  */
+#category{
+    width: 25rem;
+}
+
+/* date div */
+#date-div{
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(97, 110, 133, 0.7);
+}
+
+/* width of the date */
+#date{
+    width: 23rem;
+}
+
+
+/* display data  */
+
+/* css for the form  */
+#delete-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* div for displaying the data  */
+#display-div{
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(225, 225, 250, 0.6);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* check box css  */
+#checkbox{
+    width: 20px;
+    height: 20px;
+    border: 2 solid black ;
+
+}
+
+/* display the description */
+#name-div{
+    width: 50rem;
+}
+
+/* display the name */
+#name-span{
+    font-size: 25px;
+}
+#innder-dev{
+    padding: 10px;
+    padding-left: 30px;
+}
+
+/* background color for category */
+#category-span{
+    background-color:khaki ;
+}
+
+/* div for progress  */
+#progress-div{
+    width: 100px;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+/* display the check */
+.prog-cate-div{
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* delete icon  */
+#icon{
+    font-size: 25px;
+    margin: 10px;
+    padding: 2px;
+    color: rgb(250, 73, 73);  
+}
+
+/* css for the play all button  */
+.add-btn {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: sans-serif;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    overflow: hidden;
+    margin: 20px;
+    padding-left: 26px;
+    padding-right: 26px;
+    position: relative;
+    text-align: left;
+    transition: box-shadow .15s, transform .15s;
+    font-size: 18px;
+  }
+  
+  /* focus effect */
+  .add-btn:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+  
+  /* hover effect for the paly all button  */
+  .add-btn:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  /* color changes on action performed  */
+  .add-btn:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  
+  
+  /* css for the follow button  */
+  .delete-btn {
+    background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+    border: 0;
+    width: 100px;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 2.5;
+    margin: 20px;
+    outline: transparent;
+    /* padding: 10px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    white-space: nowrap;
+  }
+  
+  /* hover effect for the follow button  */
+  .delete-btn:hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
+  
+/* animation  */
+  .animate-charcter{
+    position: relative;
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,#231557 0%,#44107a 29%,#ff1361 67%,#fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 40px;
+    font-family: cursive;
+  }
+
+
+  

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title of the page  -->
+    <title>
+        <%= title %>
+    </title>
+
+    <!-- link to css file  -->
+    <link rel="stylesheet" href="/css/home.css">
+
+    <!-- font awesome icons  -->
+    <script src="https://kit.fontawesome.com/4072b8f88c.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <!-- this is the main div  -->
+    <div id="main" class="center-class">
+        <!-- this is the main data entry div  -->
+        <div id="data-div">
+
+            <!-- form to entry data  -->
+            <form action="/todos/create-todo" method="post">
+
+                <!-- div to entry data  -->
+                <div id="enter-data-div">
+
+                    <!-- title of the web page  -->
+                    <div>
+                        <h3 class="animate-charcter">TODO LIST</h3>
+                    </div>
+
+                    <!-- description div  -->
+                    <div id="description-div">
+                        <h3 class="heading-text">Description</h3>
+                        <!-- entry description here -->
+                        <input type="text" name="description" id="description" class="category"
+                            placeholder="What do you need to do?" required>
+                    </div>
+
+                    <!-- category div  -->
+                    <div id="cate-date-div">
+                        <div id="category-div" class="width-size">
+                            <h3 class="heading-text">Category</h3>
+                            <!-- choose category here -->
+                            <select name="category" id="category" class="category" required>
+                                <option value="" selected>Choose a category</option>
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                <option value="school">School</option>
+                                <option value="cleaning">Cleaning</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <!-- date div  -->
+                        <div id="date-div" class="width-size">
+                            <h3 class="heading-text">Date</h3>
+                            <!-- select date here -->
+                            <input type="date" name="date" id="date" class="category" required>
+                        </div>
+                    </div>
+
+                    <!-- here the data for the check field is directly added her  -->
+                    <input type="hidden" name="check" value="Task Added">
+
+                    <div>
+                        <!-- submit button  -->
+                        <button type="submit" class="add-btn" id="add-btn">Add Task</button>
+                    </div>
+
+                </div>
+
+            </form>
+
+            <!-- display data  -->
+            <!-- here the todo data will be displayed  -->
+            <!-- form to display todo data  -->
+            <form action="/todos/delete-todo" method="post" id="delete-form">
+
+                <!-- delete button  -->
+                <button type="submit" class="delete-btn" id="delete-btn"> Delete</button>
+
+                <!-- for loop to display all the todos  -->
+                <% for(let i of todo_list){ %>
+
+                    <div id="display-div">
+
+                        <!-- check box to select and delete  -->
+                        <input type="checkbox" name="<%= i._id %>" id="checkbox">
+
+                        <div id="innder-dev">
+                            <div id="name-div">
+                                <!-- display the description -->
+                                <span id="name-span">
+                                    <%= i.description %>
+                                </span>
+                            </div>
+                            <div>
+                                <!-- display the date -->
+                                <span>                   
+                                    <%= i.date %>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- display the check -->
+                        <div id="progress-div" class="prog-cate-div">
+                            <span>
+                                <%= i.check %>
+                            </span>
+                        </div>
+                       
+                        <!-- display the category -->
+                        <div>
+                            <span id="category-span" class="prog-cate-div">
+                                <%= i.category %>
+                            </span>
+                        </div>
+
+                        <!-- update button  -->
+                        <div class="prog-cate-div">
+                            <span><a href="/todos/todoData/<%= i.id %>"><i class="fas fa-pen"></i></a> </span>
+                        </div>
+
+                        <!-- delete a single todo  -->
+                        <div>
+                            <span>
+                                <a href="/todos/delete-todo-single/?id=<%= i._id %>">
+                                    <i id="icon" class="far fa-trash-alt"></i>
+                                </a>
+                            </span>
+                        </div>
+
+                    </div>
+
+                    <%}%>
+                    <!-- end of for loop  -->
+
+            </form>
+            <!-- end of for form  -->
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

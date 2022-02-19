@@ -1,0 +1,105 @@
+/* animation  */
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
+
+/* display the updated data div */
+#displayUpdate-div{
+    background-color: rgba(83, 88, 102, 0.48);
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+/* back image icon  */
+#back-icon{
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+/* width for para */
+.width-p{
+    font-size: 1.3rem;
+}
+
+/* Category data  */
+#cdtp-div{
+    display: flex;
+}
+
+/* class for all div */
+.divData{
+    background-color: rgba(100, 149, 237,0.7);
+    margin: 10px;
+    padding: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border-radius: 20px;
+    align-items: center;
+}
+
+/* description div width  */
+#des-div{
+    width: 50%;
+}
+
+/* todo input data  */
+#todo-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* css for the category */
+#category-div{
+    margin: 5px;
+}
+
+/* check progress */
+#check{
+    width: 25rem;
+}
+
+/* user progress  */
+#progress-div{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(100, 149, 237,0.7);
+}
+
+/* class for button  */
+.btn{
+    margin: 0rem;
+}
+
+/* data update button  */
+#update-btn{
+    margin-left: 0rem;
+    background-color: aqua;
+}
+
+/* css for update title  */
+.update-list {
+    color: rgb(159, 173, 235);
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    font-family: sans-serif;
+    overflow: hidden;
+    background: linear-gradient(90deg, rgb(95, 29, 170), rgb(91, 194, 253), rgb(174, 100, 235));
+    background-repeat: no-repeat;
+    background-size: 80%;
+    border-radius: 10px;
+    animation: animate 3s linear infinite;
+}
